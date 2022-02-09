@@ -20,7 +20,7 @@
       </thead>
       <tbody>
          <% @products.each_with_index do |item, index| %>
-          <%= render 'item', product: item, quantity: @line_items[index].quantity.to_i %>
+          <%= render 'item', product: item, quantity: @products[index].quantity.to_i %>
         <% end %>
       </tbody>
       <tfoot>

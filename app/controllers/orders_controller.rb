@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
         @items = @order.line_items
     @products = @items.map {|item| Product.find(item.product_id)}
-
+    
   end
 
   def create
